@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cumpleaños de Irene Flores Rodríguez</title>
+    <!-- Icono de pastel de cumpleaños para la pestaña -->
+    <link rel="icon" type="image/jpg" href="Happy Birthday Clipart_ Cake with Candles for Celebrations.jpg">
     <style>
         :root {
             --dorado: #D4AF37;
@@ -15,7 +17,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--fondo); color: var(--oscuro); line-height: 1.6; }
         
-        /* Pantalla de Bienvenida (Sello inicial) */
+        /* Pantalla de Bienvenida */
         #welcome-screen {
             position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
             background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
@@ -41,7 +43,11 @@
         .main-container { max-width: 800px; margin: 0 auto; background: var(--blanco); box-shadow: 0 0 40px rgba(0,0,0,0.1); display: none; }
         section { padding: 70px 30px; text-align: center; border-bottom: 1px solid #f0f0f0; }
         
-        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color: var(--blanco); padding: 120px 20px; }
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('image_6fb25a.png') center/cover no-repeat; 
+            color: var(--blanco); 
+            padding: 120px 20px; 
+        }
         .hero h2 { font-size: 3rem; color: var(--blanco); margin-bottom: 10px; font-weight: normal; }
         .hero p { font-size: 1.1rem; color: var(--dorado-claro); letter-spacing: 3px; text-transform: uppercase; }
         
@@ -57,6 +63,7 @@
         }
         .btn-map:hover { background-color: var(--dorado); }
 
+        /* Galería con tus fotos reales */
         .gallery-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px;
         }
@@ -68,6 +75,11 @@
     </style>
 </head>
 <body>
+
+    <!-- Reproductor de YouTube oculto para la música (comenzando en el minuto 1 / 60 segundos) -->
+    <div id="youtube-audio" style="display:none;">
+        <iframe width="0" height="0" src="https://www.youtube.com/embed/h4v4zzGPv-E?enablejsapi=1&autoplay=1&start=60" frameborder="0" allow="autoplay"></iframe>
+    </div>
 
     <!-- Pantalla Inicial de Apertura -->
     <div id="welcome-screen">
@@ -85,7 +97,7 @@
             <p>TE INVITAMOS A CELEBRAR</p>
             <h2>Irene Flores Rodríguez</h2>
             <div class="divider" style="background-color: var(--blanco);"></div>
-            <p style="font-size: 1rem; margin-top: 15px; color: #fff;">Una mañana inolvidable llena de alegría y naturaleza</p>
+            <p style="font-size: 1rem; margin-top: 15px; color: #fff;">Una mañana inolvidable llena de alegría y buenos momentos</p>
         </section>
 
         <section>
@@ -98,20 +110,20 @@
 
             <div class="details-box">
                 <h3>Lugar del Evento</h3>
-                <p style="color: #666; margin-bottom: 15px;">Te esperamos para compartir este momento especial en un ambiente campestre y rodeado de naturaleza.</p>
+                <p style="color: #666; margin-bottom: 15px;">Te esperamos para compartir este momento especial juntos.</p>
                 <a href="https://maps.app.goo.gl/1inmS4BjDE8Vyvff8?g_st=iw" target="_blank" class="btn-map">VER UBICACIÓN EN MAPS</a>
             </div>
         </section>
 
         <section style="background-color: #faf9f6;">
-            <h2 style="font-size: 2.2rem; font-weight: normal;">EL LUGAR Y AMBIENTE</h2>
+            <h2 style="font-size: 2.2rem; font-weight: normal;">EL LUGAR Y EL AMBIENTE</h2>
             <div class="divider"></div>
-            <p style="color: #666;">Un espacio rodeado de hermosos jardines y detalles dorados para disfrutar juntos.</p>
+            <p style="color: #666;">Un espacio cálido y agradable preparado para la celebración.</p>
             
             <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Jardín y naturaleza">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Detalles de recepción">
-                <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Ambiente elegante">
+                <img src="image_6fbd41.jpg" alt="Mesa preparada para el evento">
+                <img src="image_6fbdbe.jpg" alt="Vista del lugar de celebración">
+                <img src="image_70104f.jpg" alt="Detalle de platillos y desayuno">
             </div>
         </section>
 
@@ -119,7 +131,7 @@
             <h2 style="font-size: 2.2rem; font-weight: normal;">CÓDIGO DE VESTIMENTA</h2>
             <div class="divider"></div>
             <h3 style="color: var(--dorado); margin: 15px 0; font-size: 1.6rem;">Casual</h3>
-            <p style="max-width: 500px; margin: 0 auto; color: #666;">Te sugerimos vestir cómodo y elegante para disfrutar de esta hermosa celebración matutina en armonía con la naturaleza.</p>
+            <p style="max-width: 500px; margin: 0 auto; color: #666;">Te sugerimos vestir cómodo y elegante para disfrutar de esta hermosa celebración matutina.</p>
         </section>
 
         <footer>
