@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumpleaños de Irene Flores Rodríguez</title>
+    <style>
+        :root {
+            --dorado: #D4AF37;
+            --dorado-claro: #F3E5AB;
+            --oscuro: #2C2C2C;
+            --fondo: #FAFAFA;
+            --blanco: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--fondo); color: var(--oscuro); line-height: 1.6; }
+        
+        /* Pantalla de Bienvenida (Sello inicial) */
+        #welcome-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            display: flex; justify-content: center; align-items: center; z-index: 1000;
+            transition: opacity 0.8s ease;
+        }
+        .welcome-card {
+            text-align: center; padding: 40px; max-width: 500px; width: 90%;
+            border: 2px solid var(--dorado); border-radius: 12px; background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .welcome-card h3 { color: var(--dorado-claro); font-size: 1.1rem; letter-spacing: 4px; margin-bottom: 15px; text-transform: uppercase; }
+        .welcome-card h1 { color: var(--blanco); font-size: 1.8rem; margin-bottom: 30px; font-weight: 300; letter-spacing: 2px; }
+        .seal-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA771C 100%);
+            color: var(--blanco); border: none; padding: 15px 35px; font-size: 1rem;
+            letter-spacing: 2px; border-radius: 30px; cursor: pointer; font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .seal-btn:hover { transform: scale(1.05); }
+
+        /* Contenido de la Página Web */
+        .main-container { max-width: 800px; margin: 0 auto; background: var(--blanco); box-shadow: 0 0 40px rgba(0,0,0,0.1); display: none; }
+        section { padding: 70px 30px; text-align: center; border-bottom: 1px solid #f0f0f0; }
+        
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color: var(--blanco); padding: 120px 20px; }
+        .hero h2 { font-size: 3rem; color: var(--blanco); margin-bottom: 10px; font-weight: normal; }
+        .hero p { font-size: 1.1rem; color: var(--dorado-claro); letter-spacing: 3px; text-transform: uppercase; }
+        
+        .divider { width: 70px; height: 2px; background-color: var(--dorado); margin: 25px auto; }
+        
+        .details-box { background: #fcfbfa; border: 1px solid #eae5d9; border-radius: 8px; padding: 35px; margin-top: 25px; }
+        .details-box h3 { color: var(--dorado); font-size: 1.6rem; margin-bottom: 15px; }
+        
+        .btn-map {
+            display: inline-block; margin-top: 20px; background-color: var(--oscuro);
+            color: var(--blanco); padding: 12px 35px; border-radius: 25px; text-decoration: none; font-weight: bold; letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+        .btn-map:hover { background-color: var(--dorado); }
+
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px;
+        }
+        .gallery-grid img {
+            width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        footer { background: var(--oscuro); color: var(--blanco); text-align: center; padding: 50px 20px; font-size: 0.9rem; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <!-- Pantalla Inicial de Apertura -->
+    <div id="welcome-screen">
+        <div class="welcome-card">
+            <h3>CELEBRACIÓN ESPECIAL</h3>
+            <h1>IRENE FLORES RODRÍGUEZ</h1>
+            <button class="seal-btn" onclick="openInvitation()">TOCA PARA ABRIR</button>
+        </div>
+    </div>
+
+    <!-- Estructura Web de la Invitación -->
+    <div class="main-container" id="main-content">
+        
+        <section class="hero">
+            <p>TE INVITAMOS A CELEBRAR</p>
+            <h2>Irene Flores Rodríguez</h2>
+            <div class="divider" style="background-color: var(--blanco);"></div>
+            <p style="font-size: 1rem; margin-top: 15px; color: #fff;">Una mañana inolvidable llena de alegría y naturaleza</p>
+        </section>
+
+        <section>
+            <h2 style="font-size: 2.2rem; font-weight: normal;">EL GRAN DÍA</h2>
+            <div class="divider"></div>
+            <p style="font-size: 1.4rem; margin: 20px 0; color: #444;">
+                Domingo 18 de octubre del 2026<br>
+                <strong style="color: var(--dorado);">9:00 AM</strong>
+            </p>
+
+            <div class="details-box">
+                <h3>Lugar del Evento</h3>
+                <p style="color: #666; margin-bottom: 15px;">Te esperamos para compartir este momento especial en un ambiente campestre y rodeado de naturaleza.</p>
+                <a href="https://maps.app.goo.gl/1inmS4BjDE8Vyvff8?g_st=iw" target="_blank" class="btn-map">VER UBICACIÓN EN MAPS</a>
+            </div>
+        </section>
+
+        <section style="background-color: #faf9f6;">
+            <h2 style="font-size: 2.2rem; font-weight: normal;">EL LUGAR Y AMBIENTE</h2>
+            <div class="divider"></div>
+            <p style="color: #666;">Un espacio rodeado de hermosos jardines y detalles dorados para disfrutar juntos.</p>
+            
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Jardín y naturaleza">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Detalles de recepción">
+                <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=600&q=80" alt="Ambiente elegante">
+            </div>
+        </section>
+
+        <section>
+            <h2 style="font-size: 2.2rem; font-weight: normal;">CÓDIGO DE VESTIMENTA</h2>
+            <div class="divider"></div>
+            <h3 style="color: var(--dorado); margin: 15px 0; font-size: 1.6rem;">Casual</h3>
+            <p style="max-width: 500px; margin: 0 auto; color: #666;">Te sugerimos vestir cómodo y elegante para disfrutar de esta hermosa celebración matutina en armonía con la naturaleza.</p>
+        </section>
+
+        <footer>
+            <p style="font-size: 1.2rem; margin-bottom: 10px;">¡Nos vemos en el festejo!</p>
+            <p style="color: var(--dorado-claro); letter-spacing: 2px;">IRENE FLORES RODRÍGUEZ</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function openInvitation() {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            const mainContent = document.getElementById('main-content');
+
+            welcomeScreen.style.opacity = '0';
+            setTimeout(() => {
+                welcomeScreen.style.display = 'none';
+                mainContent.style.display = 'block';
+                window.scrollTo(0, 0);
+            }, 800);
+        }
+    </script>
+</body>
+</html>
