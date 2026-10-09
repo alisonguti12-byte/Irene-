@@ -13,6 +13,7 @@
             --oscuro: #2C2C2C;
             --fondo: #FAFAFA;
             --blanco: #FFFFFF;
+            --whatsapp: #25D366;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--fondo); color: var(--oscuro); line-height: 1.6; }
@@ -116,6 +117,7 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-top: 20px;
+            margin-bottom: 30px;
         }
         .gallery-grid img {
             width: 100%;
@@ -123,6 +125,48 @@
             object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Contenedor de Botones (Maps y WhatsApp) */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .map-btn, .wa-btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: 100%;
+            max-width: 320px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .map-btn {
+            background-color: var(--dorado);
+            color: var(--blanco);
+        }
+        .map-btn:hover {
+            background-color: #b3922d;
+            transform: scale(1.05);
+        }
+
+        .wa-btn {
+            background-color: var(--whatsapp);
+            color: var(--blanco);
+        }
+        .wa-btn:hover {
+            background-color: #1ebd59;
+            transform: scale(1.05);
         }
         
         footer {
@@ -175,6 +219,14 @@
                 <img src="Lugar1.PNG" alt="Lugar de celebración">
                 <img src="Lugar2.PNG" alt="Momento especial">
                 <img src="Lugar3.PNG" alt="Recuerdo">
+            </div>
+
+            <div class="btn-container">
+                <!-- Botón de Ubicación en Google Maps (Cambia 'https://maps.google.com' por tu enlace real si lo deseas) -->
+                <a href="https://maps.google.com" target="_blank" class="map-btn">📍 Ver Ubicación en Google Maps</a>
+
+                <!-- Botón de WhatsApp con tu número integrado para Confirmar Asistencia -->
+                <a href="https://wa.me/525518564828?text=¡Hola!%20Confirmo%20mi%20asistencia%20al%20cumpleaños%20de%20Irene." target="_blank" class="wa-btn">💬 Confirmar Asistencia por WhatsApp</a>
             </div>
         </section>
 
