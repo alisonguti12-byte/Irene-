@@ -17,62 +17,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: var(--fondo); color: var(--oscuro); line-height: 1.6; }
         
-        /* Pantalla de Bienvenida y Apertura */
-        #welcome-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Fondo.PNG') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.8s ease;
-        }
-        .welcome-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            max-width: 90%;
-            width: 400px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border: 2px solid var(--dorado);
-        }
-        .welcome-card h3 {
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            color: var(--dorado);
-            margin-bottom: 10px;
-        }
-        .welcome-card h1 {
-            font-size: 1.8rem;
-            color: var(--oscuro);
-            margin-bottom: 25px;
-        }
-        .seal-btn {
-            background-color: var(--dorado);
-            color: var(--blanco);
-            border: none;
-            padding: 12px 30px;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-        .seal-btn:hover {
-            background-color: #b3922d;
-            transform: scale(1.05);
-        }
-
-        /* Contenido Principal de la Invitación */
-        .main-container {
-            display: none; /* Se muestra al hacer clic en abrir */
-        }
         .hero {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('Fondo.PNG') no-repeat center center/cover;
             color: var(--blanco);
@@ -137,20 +81,11 @@
 </head>
 <body>
 
-    <!-- Reproductor de Audio Local Oculto (Audio.mp4) -->
-    <audio id="background-audio" loop preload="auto">
+    <!-- Reproductor de Audio Local con Autoplay Automático al Cargar -->
+    <audio autoplay loop preload="auto">
         <source src="./Audio.mp4" type="video/mp4">
         Tu navegador no soporta el elemento de audio.
     </audio>
-
-    <!-- Pantalla Inicial de Apertura -->
-    <div id="welcome-screen">
-        <div class="welcome-card">
-            <h3>CELEBRACIÓN ESPECIAL</h3>
-            <h1>IRENE FLORES RODRÍGUEZ</h1>
-            <button class="seal-btn" onclick="openInvitation()">TOCA PARA ABRIR</button>
-        </div>
-    </div>
 
     <!-- Estructura Web de la Invitación -->
     <div class="main-container" id="main-content">
@@ -175,22 +110,5 @@
         </footer>
     </div>
 
-    <script>
-        function openInvitation() {
-            // Reproducir el audio local al hacer clic
-            var audio = document.getElementById("background-audio");
-            audio.play().catch(function(error) {
-                console.log("Reproducción automática bloqueada o error:", error);
-            });
-
-            // Desvanecer y ocultar la pantalla de bienvenida
-            var welcomeScreen = document.getElementById("welcome-screen");
-            welcomeScreen.style.opacity = "0";
-            setTimeout(function() {
-                welcomeScreen.style.display = "none";
-                document.getElementById("main-content").style.display = "block";
-            }, 800);
-        }
-    </script>
 </body>
 </html>
